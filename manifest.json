@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "URL CHECKER",
+    "version": "1.0",
+    "description": "Validates the site's validity using the Google Safe Browsing API.",
+    "permissions": ["webNavigation", "tabs","activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "js": ["contentscript.js"]
+      }
+    ],
+    "action":{
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/access-denied.png",
+        "48": "images/access-denied.png",
+        "128": "images/access-denied.png"
+      }
+    }
+
+  }
